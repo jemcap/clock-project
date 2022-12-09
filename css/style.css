@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #252525;
+    color: gray;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* Clock */
+
+.clock {
+    position: relative;
+    background-color: lightgray;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: solid 5px darkgray;
+    box-shadow: 1px 1px 4px pink
+}
+
+.clock__numbers div {
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.7);
+}
+
+.twelve {
+    left: 50%;
+    top: 6px;
+    transform: translateX(-50%);
+}
+
+.three {
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nine {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 6px;
+}
+
+.six {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 6px;
+}
+
+.clock__hands {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock__hands::before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    background-color: black;
+    z-index: 4;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px rgba(0,0,0,.7);
+
+}
+
+.clock__hands div {
+    background-color: white;
+    width: 7px;
+    position: absolute;
+    height: 120px;
+    transform-origin: bottom center;
+    bottom: 50%;
+    border-radius: 50% 50% 0 0;
+    box-shadow: 1px 1px 2px rgba(0,0,0,.5);
+    z-index: 3
+
+}
+/* overwrite the code above to make it more specific to each class */
+.clock__hands > .hour {
+    height: 80px;
+    transform: rotate(30deg);
+}
+.clock__hands > .second {
+    height: 150px;
+    transform: rotate(250deg);
+    background-color: darkgray;
+}
